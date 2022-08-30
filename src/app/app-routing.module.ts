@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./componentLogin/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./LoginPage/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'registro',

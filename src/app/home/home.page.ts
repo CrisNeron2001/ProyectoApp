@@ -8,21 +8,7 @@ import { Animation, AnimationController, ToastController } from '@ionic/angular'
 })
 export class HomePage {
   
-  
-  
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
   // contador = 0;
 
@@ -51,8 +37,3 @@ export class HomePage {
   // aumentar(){
   //   this.contador = this.contador + 5
   // }
-
-
-function initUsers() {
-  throw new Error('Function not implemented.');
-}
