@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class IngresadoGuard implements CanActivate {
 
-  constructor(public navCtrl: NavController){  }
+  constructor(public navCtrl: NavController){}
 
   canActivate(
     route: ActivatedRouteSnapshot,
