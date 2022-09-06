@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary"
+                       menu="first">
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Compre los juegos que deseas!</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-card *ngFor="let juegos of listaJuegos">
+    <ion-item>
+      <img src="{{juegos.img}}">
+    </ion-item>
+    <ion-item>
+      <ion-card-header>
+        <ion-card-title>
+          {{juegos.nombreJuego}}
+        </ion-card-title>
+        <ion-card-title>
+          Precio: ${{juegos.precio}}
+        </ion-card-title>
+        <ion-card-subtitle>
+          Plataforma: {{juegos.consola}}
+        </ion-card-subtitle>
+        <ion-buttons>
+          <ion-button>Comprar</ion-button>
+        </ion-buttons>
+      </ion-card-header>
+    </ion-item>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title>Si necesitas ayuda contactanos: PlayMore@pmore.com</ion-title>
+  </ion-toolbar>
+</ion-footer>
