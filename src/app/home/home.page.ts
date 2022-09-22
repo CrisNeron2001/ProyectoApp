@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Animation, AnimationController, ToastController } from '@ionic/angular';
+import { ApiService } from '../service/api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +7,27 @@ import { Animation, AnimationController, ToastController } from '@ionic/angular'
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  
+  user= [];
+  personajes: any;
+
+  constructor(private apiService: ApiService){
+    this.user = this.apiService.getUser();
+    this.apiService.getPersonajes().subscribe(
+      (resultado: any) => {
+        this.personajes = resultado.results
+      },
+      (error) => {
+        console.log(error);  
+      }
+    );
   }
+  saludo(){
+    console.log(this.user);
+  }
+}
+
+  
+  
 
   // contador = 0;
 

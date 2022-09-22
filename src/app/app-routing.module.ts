@@ -10,31 +10,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'home',
     pathMatch: 'full'
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./LoginPage/login/login.module').then( m => m.LoginPageModule),
-    
-  },
-  {
-    path: 'registro',
-    loadChildren: () => import('./RegistroPage/registro/registro.module').then( m => m.RegistroPageModule),
-    
-  },
-  {
-    path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule),
-
-  },
-  {
-    path: 'menu-principal',
-    loadChildren: () => import('./menu-principal/menu-principal.module').then( m => m.MenuPrincipalPageModule)
-  },
-  {
-    path: 'juegos',
-    loadChildren: () => import('./juegos/juegos.module').then( m => m.JuegosPageModule)
   }
 ];
 
